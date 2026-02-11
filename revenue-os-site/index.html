@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Revenue Operating System - Complete CRM Strategic Playbook from market analysis to execution">
+    <title>Revenue OS | Complete Strategic Playbook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #2E5C8A;
+            --dark-gray: #1A1A1A;
+            --medium-gray: #666666;
+            --light-gray: #CCCCCC;
+            --bg-light: #F5F7FA;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1E4366 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        header .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-top: 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--white);
+            padding: 60px 20px;
+            margin: -40px auto 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero .promise {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            font-style: italic;
+            margin: 30px 0;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .stat-card .number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            font-weight: 500;
+        }
+
+        /* Questions Grid */
+        .questions-section {
+            padding: 60px 20px;
+            background: var(--white);
+            margin: 40px 0;
+        }
+
+        .questions-section h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .questions-section .intro {
+            text-align: center;
+            color: var(--medium-gray);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .question-card {
+            background: var(--white);
+            border: 2px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .question-card:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 8px 30px rgba(46, 92, 138, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .question-card .q-number {
+            display: inline-block;
+            background: var(--primary-blue);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .question-card h3 {
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .question-card p {
+            color: var(--medium-gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .question-card .topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .question-card .topic-tag {
+            background: var(--bg-light);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+        }
+
+        .question-card .arrow {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            float: right;
+            transition: transform 0.3s ease;
+        }
+
+        .question-card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1E4366 100%);
+            color: var(--white);
+            padding: 80px 20px;
+            text-align: center;
+            margin: 60px 0 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            margin: 10px;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header .tagline {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .questions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card .number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>REVENUE OPERATING SYSTEM</h1>
+            <p class="tagline">The Only CRM Built by RevOps Consultants, for RevOps Reality</p>
+            <p class="subtitle">Complete Strategic Playbook: Market Analysis • Product Strategy • Growth Roadmap • Execution Plan</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <div class="logo">Revenue OS</div>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#questions">Analysis</a></li>
+                <li><a href="documents/">Documents</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero" id="overview">
+        <h2>The Market Opportunity</h2>
+        <p style="font-size: 1.1rem; color: var(--medium-gray); margin-bottom: 30px;">
+            This isn't another CRM platform. It's Revenue Transformation as a Service — methodology + technology + implementation in 60 days.
+        </p>
+        
+        <div class="promise">
+            "Transform your sales process from founder-dependent chaos to a predictable revenue machine in 60 days — guaranteed to increase your qualified pipeline by 50% or we work for free until it does."
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">$10B+</div>
+                <div class="label">Addressable Market</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">84%</div>
+                <div class="label">CRM Seekers <1K Employees</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">60 Days</div>
+                <div class="label">Implementation Time</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">90%+</div>
+                <div class="label">Success Rate (vs 30% industry)</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="questions-section" id="questions">
+        <div class="container">
+            <h2>8 Comprehensive Strategic Analyses</h2>
+            <p class="intro">
+                Each analysis synthesizes insights from ChatGPT, Grok, Qwen, and Kimi — providing consensus maps, key divergences, unique contributions, and strategic synthesis for decision-making.
+            </p>
+
+            <div class="questions-grid">
+                <a href="question1.html" class="question-card">
+                    <div class="q-number">Q1</div>
+                    <h3>Top CRM Operational Analysis</h3>
+                    <p>Deep dive into how Salesforce, HubSpot, and Zoho scaled. Employee counts, revenue per employee, S&M costs, time to $100M, operational metrics, and competitive weaknesses exposed.</p>
+                    <div class="topics">
+                        <span class="topic-tag">Salesforce</span>
+                        <span class="topic-tag">HubSpot</span>
+                        <span class="topic-tag">Zoho</span>
+                        <span class="topic-tag">Operational Scale</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question2.html" class="question-card">
+                    <div class="q-number">Q2</div>
+                    <h3>New Competitor Differentiation</h3>
+                    <p>8 archetypes of AI-native CRMs analyzed: AI-Native Data Platforms, Autonomous CRMs, GTM Operating Systems, Social-First, Personal CRMs, Vertical-Specific, RevOps Intelligence.</p>
+                    <div class="topics">
+                        <span class="topic-tag">Attio</span>
+                        <span class="topic-tag">Folk</span>
+                        <span class="topic-tag">Clarify</span>
+                        <span class="topic-tag">AI-Native</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question3.html" class="question-card">
+                    <div class="q-number">Q3</div>
+                    <h3>Customer Complaints & Frustrations</h3>
+                    <p>50+ direct user quotes revealing pain points. What customers hate about Salesforce, HubSpot, Zoho, and new AI CRMs. Data entry burden, pricing traps, support quality, AI overpromises.</p>
+                    <div class="topics">
+                        <span class="topic-tag">User Quotes</span>
+                        <span class="topic-tag">Pain Points</span>
+                        <span class="topic-tag">Complaints</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question4.html" class="question-card">
+                    <div class="q-number">Q4</div>
+                    <h3>Your CRM Architecture Design</h3>
+                    <p>Complete product blueprint: 6 Core Pillars, Methodology Engine, AI Sherpa, Personal Touch Protocol, unique features no competitor has, technology stack, implementation approach.</p>
+                    <div class="topics">
+                        <span class="topic-tag">Product Design</span>
+                        <span class="topic-tag">Features</span>
+                        <span class="topic-tag">Differentiation</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question5.html" class="question-card">
+                    <div class="q-number">Q5</div>
+                    <h3>Target Market Analysis</h3>
+                    <p>SaaS/Fintech $1-10M ARR strategy. The "Goldilocks Positioning" — why this segment is perfect. Dual Vertical strategy: Phase 1 (SaaS/Fintech), Phase 2 (Premium Services).</p>
+                    <div class="topics">
+                        <span class="topic-tag">ICP</span>
+                        <span class="topic-tag">Market Sizing</span>
+                        <span class="topic-tag">Positioning</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question6.html" class="question-card">
+                    <div class="q-number">Q6</div>
+                    <h3>$100M Growth Framework</h3>
+                    <p>Alex Hormozi's complete frameworks applied: $100M Offers (Grand Slam Offer), $100M Leads (channel strategy), $100M Model (revenue streams). 5-year projections to $100M ARR.</p>
+                    <div class="topics">
+                        <span class="topic-tag">Hormozi</span>
+                        <span class="topic-tag">5-Year Plan</span>
+                        <span class="topic-tag">Revenue Model</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question7.html" class="question-card">
+                    <div class="q-number">Q7</div>
+                    <h3>Year 1 Execution Plan</h3>
+                    <p>Concrete tactical roadmap: 60 customers @ $20K ACV = $1.2M ARR. 8-person team build, weekly acquisition targets, pricing ladder, onboarding delivery, org/hiring milestones.</p>
+                    <div class="topics">
+                        <span class="topic-tag">Year 1</span>
+                        <span class="topic-tag">Metrics</span>
+                        <span class="topic-tag">Hiring</span>
+                        <span class="topic-tag">Targets</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="question8.html" class="question-card">
+                    <div class="q-number">Q8</div>
+                    <h3>Go-to-Market Package</h3>
+                    <p>Complete GTM toolkit: 12-slide sales deck, 4-email outbound sequence, first 10 features to build (priority matrix), 12-point Revenue Diagnostic, VC/accelerator partner pitch.</p>
+                    <div class="topics">
+                        <span class="topic-tag">Sales Deck</span>
+                        <span class="topic-tag">Scripts</span>
+                        <span class="topic-tag">Features</span>
+                        <span class="topic-tag">Diagnostic</span>
+                    </div>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build the Future of Revenue Operations?</h2>
+            <p>Download the complete strategic playbook and all 8 detailed analysis documents</p>
+            <a href="documents/" class="btn btn-primary">View All Documents</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p><strong>Revenue Operating System</strong> — The only CRM built by RevOps consultants, for RevOps reality</p>
+            <p style="margin-top: 20px; opacity: 0.6;">Comparative analysis synthesizing insights from ChatGPT, Grok, Qwen, and Kimi</p>
+        </div>
+    </footer>
+</body>
+</html>
