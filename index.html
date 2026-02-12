@@ -489,13 +489,18 @@
             line-height: 1.7;
         }
 
-        /* Comparison Table */
+        /* Comparison Table - Works on ANY background */
         .comparison-table {
-            background: rgba(255, 255, 255, 0.05);
+            background: transparent;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .section.dark .comparison-table {
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
         }
 
         .comparison-table table {
@@ -514,9 +519,17 @@
 
         .comparison-table td {
             padding: 25px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            color: var(--dark);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Dark section tables */
+        .section.dark .comparison-table td {
             color: white;
-            background: transparent;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .comparison-table td strong {
@@ -525,7 +538,11 @@
         }
 
         .comparison-table tr:hover td {
-            background: rgba(16, 185, 129, 0.1);
+            background: rgba(16, 185, 129, 0.15);
+        }
+
+        .section.dark .comparison-table tr:hover td {
+            background: rgba(16, 185, 129, 0.2);
         }
 
         .comparison-table tr:last-child td {
@@ -534,7 +551,11 @@
 
         /* Make REVOS row stand out */
         .comparison-table tr:last-child {
-            background: rgba(16, 185, 129, 0.15);
+            background: rgba(16, 185, 129, 0.2);
+        }
+
+        .section.dark .comparison-table tr:last-child {
+            background: rgba(16, 185, 129, 0.25);
         }
 
         .comparison-table tr:last-child td {
