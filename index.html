@@ -36,7 +36,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Hero Section - Full Screen */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
             background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, var(--primary-dark) 100%);
@@ -304,7 +304,7 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Problem/Solution Grid */
+        /* Split Grid */
         .split-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -489,7 +489,7 @@
             line-height: 1.7;
         }
 
-        /* Comparison Table - Works on ANY background */
+        /* Comparison Table */
         .comparison-table {
             background: transparent;
             border-radius: 20px;
@@ -525,7 +525,6 @@
             backdrop-filter: blur(10px);
         }
 
-        /* Dark section tables */
         .section.dark .comparison-table td {
             color: white;
             background: rgba(255, 255, 255, 0.05);
@@ -549,7 +548,6 @@
             border-bottom: none;
         }
 
-        /* Make REVOS row stand out */
         .comparison-table tr:last-child {
             background: rgba(16, 185, 129, 0.2);
         }
@@ -712,13 +710,13 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- Hero -->
     <div class="hero">
         <div class="hero-content">
             <div class="hero-badge">Elev8Rev + REVOS™</div>
             <h1>Revenue <span class="highlight">Execution</span> Infrastructure</h1>
             <p class="tagline">CRMs track activity. We enforce execution.</p>
-            <p class="subtitle">The first system that guarantees process discipline — so revenue becomes predictable.</p>
+            <p class="subtitle">The first system that guarantees process execution — scripts, role-play, coaching, governance, and ops alignment — so revenue becomes predictable.</p>
             
             <div class="cta-group">
                 <a href="#problem" class="btn btn-primary">See The Problem</a>
@@ -747,23 +745,23 @@
             <div class="section-header">
                 <span class="badge">The Problem</span>
                 <h2>CRMs Track Activity.<br>They Don't Enforce Execution.</h2>
-                <p>$70B+ market. Still broken at the execution level.</p>
+                <p>$70B-$128B+ market growing at 8-15% CAGR. SaaS CRM projected to exceed $359B by 2034.</p>
             </div>
 
             <div class="split-grid">
                 <div class="split-content">
-                    <h3>What Goes Wrong:</h3>
+                    <h3>5 Major Complaints:</h3>
                     <ul class="icon-list red">
-                        <li><strong>Forecast misses</strong> — Pipeline looks healthy, deals stall</li>
-                        <li><strong>Stalled deals</strong> — No one knows why they went cold</li>
-                        <li><strong>Founder-dependent closings</strong> — Reps can't close without you</li>
-                        <li><strong>Reps improvising</strong> — Everyone has their own "process"</li>
-                        <li><strong>Managers coaching vibes</strong> — No objective rep calibration</li>
+                        <li><strong>Complexity Overload</strong> — 6-12+ month implementations, requires admins/consultants, heavy customization burden</li>
+                        <li><strong>Pricing Pain</strong> — Low barrier entry but rapid cost escalation, "bait-and-switch" at scale</li>
+                        <li><strong>Adoption Issues</strong> — Reps spend too much time entering data, not selling</li>
+                        <li><strong>Limited Execution Enforceability</strong> — Tools record activity but rarely force compliance</li>
+                        <li><strong>AI Overpromise</strong> — AI features generate noise but lack enforceable process outcomes</li>
                     </ul>
                 </div>
                 <div class="split-visual">
                     <div class="quote-box" style="margin: 0;">
-                        <p>"CRM adoption ≠ Revenue predictability"</p>
+                        <p>"CRM is mission-critical infrastructure, yet adoption ≠ Revenue predictability"</p>
                     </div>
                 </div>
             </div>
@@ -801,66 +799,115 @@
             </div>
 
             <div class="quote-box" style="margin-top: 80px;">
-                <p>"That's the gap."</p>
+                <p>"That's the gap. That's not feature differentiation. That's category definition."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gap Analysis -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="badge">Gap Analysis</span>
+                <h2>Where Competitors Miss</h2>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Strength</th>
+                            <th>Miss</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Salesforce</strong></td>
+                            <td>Enterprise scale, customization</td>
+                            <td>Too complex, expensive</td>
+                            <td>Low adoption + high admin dependency</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HubSpot</strong></td>
+                            <td>Easy start, sales + marketing</td>
+                            <td>Pricing jump + feature gating</td>
+                            <td>Confusing upgrade experience</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zoho</strong></td>
+                            <td>Cheap + modular</td>
+                            <td>UX issues, fragmented workflows</td>
+                            <td>Mixed support experiences</td>
+                        </tr>
+                        <tr>
+                            <td><strong>New AI CRMs</strong></td>
+                            <td>Fast setup</td>
+                            <td>Limited proven execution</td>
+                            <td>Feature-focused but shallow discipline</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
     <!-- Solution Section -->
-    <section id="solution" class="section">
+    <section id="solution" class="section dark">
         <div class="container">
             <div class="section-header">
                 <span class="badge">The Solution</span>
                 <h2>REVOS™: Revenue Operating System</h2>
-                <p>Sits on top of your CRM. Enforces discipline. Makes revenue predictable.</p>
+                <p>Not just database — enforces what must be done before progressing deals.</p>
             </div>
 
             <div class="feature-grid">
                 <div class="feature-card">
                     <div class="icon">🔒</div>
                     <h4>Process-Locked Pipeline</h4>
-                    <p>Deals cannot advance without required evidence. No more fake pipeline.</p>
+                    <p><strong>Competitor Gap:</strong> CRM platforms record but don't enforce<br><strong>Value:</strong> 90%+ adoption rates</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon">📊</div>
                     <h4>Revenue Compliance Index™</h4>
-                    <p>0-100 score tracking methodology adherence. Coaches behavior, not just logs.</p>
+                    <p><strong>Competitor Gap:</strong> No discipline metric in CRMs<br><strong>Value:</strong> Coaches behavior, not just logs</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🎙️</div>
+                    <h4>Call Confidence Scores</h4>
+                    <p><strong>Competitor Gap:</strong> Traditional CRMs unable to measure quality<br><strong>Value:</strong> Objective rep calibration</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon">🎯</div>
                     <h4>Objection Intelligence</h4>
-                    <p>Automated objection tracking and counter-library. No more messy notes.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="icon">✓</div>
-                    <h4>Certification Gates</h4>
-                    <p>Reps must pass confidence checks before scaling. Objective calibration.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="icon">📡</div>
-                    <h4>Founder War Room</h4>
-                    <p>Real-time visibility into every deal, rep confidence, and objection patterns.</p>
+                    <p><strong>Competitor Gap:</strong> CRM notes are messy<br><strong>Value:</strong> Automated insights + counters</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="icon">⚖️</div>
-                    <h4>COO Promise Control</h4>
-                    <p>Margin guardrails prevent unprofitable promises. Protects delivery capacity.</p>
+                    <h4>COO Margin Guardrails</h4>
+                    <p><strong>Competitor Gap:</strong> CRM ignores delivery constraints<br><strong>Value:</strong> Protects profitability</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h4>AI That Enforces Doctrine</h4>
+                    <p><strong>Competitor Gap:</strong> Generic AI features<br><strong>Value:</strong> Narrow, proven outcomes</p>
                 </div>
             </div>
 
             <div class="quote-box">
-                <p>"If process is followed → revenue becomes predictable."</p>
+                <p>"These are system primitives, not bolt-ons."</p>
             </div>
         </div>
     </section>
 
     <!-- Market Stats -->
-    <section class="section dark">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <span class="badge">Market Opportunity</span>
@@ -874,11 +921,11 @@
                 </div>
                 <div class="stat">
                     <span class="number">8-15%</span>
-                    <span class="label">Annual Growth Rate</span>
+                    <span class="label">Annual CAGR</span>
                 </div>
                 <div class="stat">
-                    <span class="number">30-40%</span>
-                    <span class="label">CRM Success Rate</span>
+                    <span class="number">$359B</span>
+                    <span class="label">SaaS CRM by 2034</span>
                 </div>
                 <div class="stat">
                     <span class="number">$100M</span>
@@ -889,7 +936,7 @@
     </section>
 
     <!-- Why Now -->
-    <section id="why-now" class="section">
+    <section id="why-now" class="section dark">
         <div class="container">
             <div class="section-header">
                 <span class="badge">Why Now</span>
@@ -916,7 +963,7 @@
     </section>
 
     <!-- Competitive Landscape -->
-    <section class="section dark">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <span class="badge">Competition</span>
@@ -935,7 +982,7 @@
                     <tbody>
                         <tr>
                             <td><strong>Salesforce</strong></td>
-                            <td>Enterprise scale, customization</td>
+                            <td>Enterprise scale, customization (~23% market share)</td>
                             <td>Too complex, admin-heavy, optional discipline</td>
                         </tr>
                         <tr>
@@ -950,7 +997,7 @@
                         </tr>
                         <tr>
                             <td><strong>New AI CRMs</strong></td>
-                            <td>Fast setup, modern UI</td>
+                            <td>Fast setup, modern UI (Attio, Day AI, Folk)</td>
                             <td>Feature-driven, shallow execution</td>
                         </tr>
                         <tr>
@@ -969,7 +1016,7 @@
     </section>
 
     <!-- Growth Plan -->
-    <section class="section">
+    <section class="section dark">
         <div class="container">
             <div class="section-header">
                 <span class="badge">Traction Plan</span>
@@ -1027,11 +1074,13 @@
                     </tbody>
                 </table>
             </div>
+
+            <p style="text-align: center; margin-top: 50px; font-size: 1.2rem; opacity: 0.9;">This trajectory balances: Methodology strength, Productization speed, Market gap exploitation</p>
         </div>
     </section>
 
     <!-- Strategic Analysis Tabs -->
-    <section id="analysis" class="section dark">
+    <section id="analysis" class="section">
         <div class="container">
             <div class="section-header">
                 <span class="badge">Deep Analysis</span>
@@ -1054,7 +1103,7 @@
                 </div>
 
                 <div style="margin-top: 50px;">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 20px;">Why REVOS™ Wins:</h4>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">Why REVOS™ Wins:</h4>
                     <ul class="icon-list">
                         <li><strong>Short and memorable</strong> — 5 letters, easy to say</li>
                         <li><strong>Infrastructure feel</strong> — Like an operating system, not a tool</li>
@@ -1065,11 +1114,11 @@
             </div>
 
             <div id="tab2" class="tab-content">
-                <h3 style="margin-bottom: 30px;">Technical Architecture</h3>
+                <h3 style="margin-bottom: 30px; color: var(--dark);">Technical Architecture</h3>
                 
-                <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 16px; margin-bottom: 40px;">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 20px;">Core Technology Stack:</h4>
-                    <ul style="list-style: none; font-size: 1.1rem; line-height: 2;">
+                <div style="background: rgba(46, 92, 138, 0.05); padding: 40px; border-radius: 16px; margin-bottom: 40px;">
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">Core Technology Stack:</h4>
+                    <ul style="list-style: none; font-size: 1.1rem; line-height: 2; color: var(--dark);">
                         <li>✓ <strong>Frontend:</strong> React + TypeScript</li>
                         <li>✓ <strong>Backend:</strong> NestJS + PostgreSQL + Redis</li>
                         <li>✓ <strong>AI Layer:</strong> OpenAI API + RAG (vector store)</li>
@@ -1077,7 +1126,7 @@
                     </ul>
                 </div>
 
-                <h4 style="font-size: 1.5rem; margin-bottom: 20px;">The 3 Non-Negotiables:</h4>
+                <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">The 3 Non-Negotiables:</h4>
                 <ul class="icon-list">
                     <li><strong>Auto-Capture + Hygiene:</strong> Zero manual data entry — <5% time on admin (vs 20-30% industry)</li>
                     <li><strong>Playbook Enforcement:</strong> Blocks stage advancement without evidence — 90%+ adherence (vs 40% industry)</li>
@@ -1086,16 +1135,16 @@
             </div>
 
             <div id="tab3" class="tab-content">
-                <h3 style="margin-bottom: 30px;">Target Market: The "Goldilocks Zone"</h3>
+                <h3 style="margin-bottom: 30px; color: var(--dark);">Target Market: The "Goldilocks Zone"</h3>
                 
                 <div class="quote-box">
                     <p>"Big enough to need a system, small enough they can't afford enterprise complexity"</p>
                 </div>
 
                 <div style="margin-top: 50px;">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 20px;">Ideal Customer Profile:</h4>
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">Ideal Customer Profile:</h4>
                     <ul class="icon-list">
-                        <li><strong>Industry:</strong> B2B SaaS or Fintech</li>
+                        <li><strong>Industry:</strong> B2B SaaS or Fintech (vertical-optimized)</li>
                         <li><strong>Revenue:</strong> $3M-$15M ARR (Year 1 focus)</li>
                         <li><strong>Team:</strong> 5-15 sales reps</li>
                         <li><strong>Current Stack:</strong> HubSpot or Salesforce users</li>
@@ -1105,19 +1154,19 @@
             </div>
 
             <div id="tab4" class="tab-content">
-                <h3 style="margin-bottom: 30px;">Year 1 Execution Plan</h3>
+                <h3 style="margin-bottom: 30px; color: var(--dark);">Year 1 Execution Plan</h3>
                 
-                <div style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 16px; margin-bottom: 40px;">
-                    <h4 style="font-size: 1.5rem; margin-bottom: 20px;">Business Model:</h4>
-                    <ul style="list-style: none; font-size: 1.2rem; line-height: 2.5;">
+                <div style="background: rgba(46, 92, 138, 0.05); padding: 40px; border-radius: 16px; margin-bottom: 40px;">
+                    <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">Business Model:</h4>
+                    <ul style="list-style: none; font-size: 1.2rem; line-height: 2.5; color: var(--dark);">
                         <li>🚀 <strong>Launch (Founder-led):</strong> $997/mo → $30K ACV</li>
                         <li>📈 <strong>Scale (Manager-led):</strong> $2,497/mo → $60K ACV</li>
                         <li>⚡ <strong>Ops-Proof (COO layer):</strong> $4,997/mo → $100K ACV</li>
                     </ul>
-                    <p style="margin-top: 30px; font-size: 1.1rem; opacity: 0.8;">Year 1 Blended ACV: $20K × 60 customers = <strong>$1.2M ARR</strong></p>
+                    <p style="margin-top: 30px; font-size: 1.1rem; color: var(--gray);">Year 1 Blended ACV: $20K × 60 customers = <strong style="color: var(--accent);">$1.2M ARR</strong></p>
                 </div>
 
-                <h4 style="font-size: 1.5rem; margin-bottom: 20px;">Quarterly Targets:</h4>
+                <h4 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--dark);">Quarterly Targets:</h4>
                 <ul class="icon-list">
                     <li><strong>Q1:</strong> 8 customers, $160K ARR — Founder network, prove model</li>
                     <li><strong>Q2:</strong> 15 customers, $460K ARR — Podcast launch, referrals</li>
@@ -1129,41 +1178,41 @@
     </section>
 
     <!-- The Moat -->
-    <section class="section">
+    <section class="section dark">
         <div class="container">
             <div class="section-header">
-                <span class="badge">Our Defensibility</span>
+                <span class="badge">Structural Barriers</span>
                 <h2>Why No One Can Easily Compete</h2>
             </div>
 
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h4>Consulting DNA Embedded</h4>
-                    <p>Competitors build tools. We build systems people actually adopt.</p>
+                    <h4>🔹 Consulting DNA Embedded</h4>
+                    <p>Competitors build tools. You build systems people actually adopt.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h4>Methodology + Product Integration</h4>
-                    <p>Most CRMs build flexible canvases. We build infrastructure that executes doctrine.</p>
+                    <h4>🔹 Methodology + Product Integration</h4>
+                    <p>Most CRMs build flexible canvases. You build infrastructure that executes doctrine.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h4>Founder + Human-in-Loop</h4>
-                    <p>Other AI tools assume automation suffices. We know enforcement requires humans.</p>
+                    <h4>🔹 Founder + Human-in-Loop</h4>
+                    <p>Other AI-CRM tools assume automation alone suffices — history shows outcomes vary without enforcement.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h4>Targeted Vertical Fit</h4>
-                    <p>Most CRMs are horizontal. We're vertical-optimized for mid-market B2B SaaS.</p>
+                    <h4>🔹 Targeted Vertical Fit</h4>
+                    <p>Most CRMs are horizontal; you are vertical-optimized (B2B SaaS / Fintech mid-market) — easier to win trust and refine product.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h4>Process Enforcement Engine</h4>
+                    <h4>🔹 Process Enforcement Engine</h4>
                     <p>Core IP: behavior governance + compliance scoring + certification gates.</p>
                 </div>
 
                 <div class="feature-card">
-                    <h4>Category Definition</h4>
+                    <h4>🔹 Category Definition</h4>
                     <p>We're not competing for "best CRM." We're defining Revenue Execution Infrastructure.</p>
                 </div>
             </div>
@@ -1175,7 +1224,7 @@
     </section>
 
     <!-- Vision Section -->
-    <section class="section dark">
+    <section class="section">
         <div class="container">
             <div class="section-header">
                 <span class="badge">The Vision</span>
@@ -1183,11 +1232,11 @@
             </div>
 
             <div class="quote-box" style="margin: 60px 0;">
-                <p style="font-size: 1.8rem;">"Elev8Rev installs REVOS™ inside growth-stage companies.<br><br>The result: 90%+ methodology adherence, predictable forecasting, margin protection, rep confidence scaling, founder liberation."</p>
+                <p style="font-size: 1.8rem;">"The first CRM that guarantees process execution — scripts, role-play, coaching, governance, and ops alignment — so revenue becomes predictable."</p>
             </div>
 
             <div style="text-align: center; margin-top: 60px;">
-                <p style="font-size: 1.5rem; margin-bottom: 40px; opacity: 0.9;">We don't sell CRM. We sell execution certainty.</p>
+                <p style="font-size: 1.5rem; margin-bottom: 40px; color: var(--gray);">We don't sell CRM. We sell execution certainty.</p>
                 <div class="cta-group">
                     <a href="#" class="btn btn-primary" onclick="alert('Contact us at hello@elev8rev.com'); return false;">Get Started</a>
                     <a href="#" class="btn btn-secondary" onclick="alert('Download pitch deck - Coming Soon'); return false;">Download Deck</a>
