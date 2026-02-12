@@ -382,6 +382,10 @@
             background: linear-gradient(135deg, var(--red), #DC2626);
         }
 
+        .section.dark .icon-list li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
         /* Stats Bar */
         .stats-bar {
             display: grid;
@@ -487,10 +491,11 @@
 
         /* Comparison Table */
         .comparison-table {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .comparison-table table {
@@ -499,7 +504,7 @@
         }
 
         .comparison-table th {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            background: linear-gradient(135deg, var(--accent), #059669);
             color: white;
             padding: 25px;
             text-align: left;
@@ -509,15 +514,31 @@
 
         .comparison-table td {
             padding: 25px;
-            border-bottom: 1px solid var(--light);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            background: transparent;
         }
 
-        .comparison-table tr:hover {
-            background: rgba(16, 185, 129, 0.02);
+        .comparison-table td strong {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .comparison-table tr:hover td {
+            background: rgba(16, 185, 129, 0.1);
         }
 
         .comparison-table tr:last-child td {
             border-bottom: none;
+        }
+
+        /* Make REVOS row stand out */
+        .comparison-table tr:last-child {
+            background: rgba(16, 185, 129, 0.15);
+        }
+
+        .comparison-table tr:last-child td {
+            font-weight: 600;
         }
 
         /* Tabs */
@@ -656,6 +677,15 @@
 
             nav ul {
                 display: none;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px;
             }
         }
     </style>
